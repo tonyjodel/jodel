@@ -1,6 +1,6 @@
 public class Fraction3 {
-    private final int num; // numérateur
-    private final int den; // dénominateur
+    private final int num; 
+    private final int den; 
 
     public Fraction3(int num, int den) {
         if (den == 0) {
@@ -42,7 +42,6 @@ public class Fraction3 {
         return (double) num / den;
     }
 
-    @Override
     public String toString() {
         return num + "/" + den;
     }
