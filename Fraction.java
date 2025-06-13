@@ -6,7 +6,16 @@ public class Fraction {
         if (den == 0) {
             throw new IllegalArgumentException("Le dénominateur ne peut pas être zéro.");
         }
-        // ici on pourrait simplifier la fraction (réduction)
+
+        int pgcd = MathUtils.pgcd(num, den);
+        num /= pgcd;
+        den /= pgcd;
+
+        if (den < 0) {
+            num = -num;
+            den = -den;
+        }
+
         this.num = num;
         this.den = den;
     }
@@ -19,24 +28,22 @@ public class Fraction {
         return den;
     }
 
-    @Override
-    public String toString() {
-        return num + "/" + den;
-    }
-
-    // Exemple d'addition
     public Fraction add(Fraction other) {
         int newNum = this.num * other.den + other.num * this.den;
         int newDen = this.den * other.den;
-        return new Fraction(newNum, newDen); // à réduire plus tard
+        return new Fraction(newNum, newDen);
     }
 
-    // Tu peux ajouter soustraction, multiplication, division ici
+    
+    public String toTexte() {
+        return num + "/" + den;
+    }
 
     public static void main(String[] args) {
         Fraction f1 = new Fraction(1, 2);
         Fraction f2 = new Fraction(3, 4);
         Fraction result = f1.add(f2);
-        System.out.println(f1 + " + " + f2 + " = " + result);
+
+        System.out.println(f1.toTexte() + " + " + f2.toTexte() + " = " + result.toTexte());
     }
 }
