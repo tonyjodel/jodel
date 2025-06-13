@@ -34,8 +34,8 @@ public class Fraction2 {
         return new Fraction2(newNum, newDen);
     }
 
-    @Override
-    public String toString() {
+    
+    public String toTexte() {
         return num + "/" + den;
     }
 
@@ -43,6 +43,8 @@ public class Fraction2 {
         Fraction2 f1 = new Fraction2(1, 2);
         Fraction2 f2 = new Fraction2(3, 4);
         Fraction2 result = f1.add(f2);
-        System.out.println(f1 + " + " + f2 + " = " + result);  // 1/2 + 3/4 = 5/4
+
+        System.out.println(f1.toTexte() + " + " + f2.toTexte() + " = " + result.toTexte());
+        
     }
 }
