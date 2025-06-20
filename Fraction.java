@@ -43,7 +43,6 @@ public class Fraction {
         Fraction f1 = new Fraction(1, 2);
         Fraction f2 = new Fraction(3, 4);
         Fraction result = f1.add(f2);
-
         System.out.println(f1.toTexte() + " + " + f2.toTexte() + " = " + result.toTexte());
     }
 }

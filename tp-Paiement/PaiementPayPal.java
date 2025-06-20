@@ -1,5 +1,5 @@
 public class PaiementPayPal implements Paiement {
-    private String email;
+    private String ;
     private double solde;
 
     public PaiementPayPal(String email, double solde) {

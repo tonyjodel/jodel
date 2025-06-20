@@ -1,4 +1,4 @@
-public class Carte2 extends Carte {
+public class Carte2 extends Carte2 {
     private final String couleur;
 
     public Carte2(String couleur, int valeur) {
